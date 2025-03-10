@@ -49,3 +49,7 @@ print("Dizinin son elamanı: ")
 let lastElement = exampleArray2[exampleArray2.count - 1]
 print(lastElement)
 print("Dizinin son elamanı: \(exampleArray2.count - 1)") //bu yanlış
+
+//----------------------
+var exampleArray3 = ["Test6","Test4","Test612","Test3"]
+print(exampleArray3.sorted())
