@@ -53,3 +53,21 @@ print("Dizinin son elamanı: \(exampleArray2.count - 1)") //bu yanlış
 //----------------------
 var exampleArray3 = ["Test6","Test4","Test612","Test3"]
 print(exampleArray3.sorted())
+
+
+//----Set
+var setDizi : Set = [1,1,2,3,4,5,5]
+print(setDizi)
+//----- yada
+let newDizi1 : Set = [1,2,3,4,5,5,5,6]
+let newDizi2 : Set = [1,23,43,6456,75876,1,5,5]
+
+let newDiziResult = newDizi1.union(newDizi2)
+//----- set yerine diziyi birleştirmek isteseydim
+let newArray = [1,2,312,312,31,23,4]
+let newArray2 = [1,123,12,3123,2,2,4]
+
+let newArrayResult = newArray + newArray2
+print(newArrayResult)
+
+//----
