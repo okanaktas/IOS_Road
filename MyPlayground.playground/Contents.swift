@@ -70,4 +70,6 @@ let newArray2 = [1,123,12,3123,2,2,4]
 let newArrayResult = newArray + newArray2
 print(newArrayResult)
 
-//----
+//----Dictionary(kotlinde ki hashmap) key-value muhabbeti
+let hop1 = ["Deneme" : "mi ki ?","Deneme2" : "mi ki2 ?"]
+print(hop1["Deneme"]!)
