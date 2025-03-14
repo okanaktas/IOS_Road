@@ -73,3 +73,14 @@ print(newArrayResult)
 //----Dictionary(kotlinde ki hashmap) key-value muhabbeti
 let hop1 = ["Deneme" : "mi ki ?","Deneme2" : "mi ki2 ?"]
 print(hop1["Deneme"]!)
+
+let myDictionary = ["Run" : 100, "Swim" : 200, "Basketball" : 300]
+print(myDictionary["Run"])
+
+
+var myNumber = 0
+
+while myNumber <= 10{
+    print(myNumber)
+    myNumber += 1
+}
