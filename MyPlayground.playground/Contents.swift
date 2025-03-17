@@ -84,3 +84,15 @@ while myNumber <= 10{
     print(myNumber)
     myNumber += 1
 }
+
+
+var yourNumbers = [10,20,30,40,50] 
+var result = 0
+for i in yourNumbers{
+    result = i / 5
+    print(result)
+}
+
+for i in 1...5{
+    print(i)
+}
