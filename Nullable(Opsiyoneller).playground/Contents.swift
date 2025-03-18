@@ -1,3 +1,7 @@
 import UIKit
 
-var greeting = "Hello, playground"
+var myValue = "asfadsg"
+
+var myNewValue = (Int(myValue) ?? 0) * 5
+
+print(myNewValue)
