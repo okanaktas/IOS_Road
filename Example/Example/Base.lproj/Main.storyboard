@@ -18,26 +18,27 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Layout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTV-Cg-duK">
                                 <rect key="frame" x="0.0" y="89" width="393" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="guo-i6-Ggn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="EPt-Ry-y1G">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="EPt-Ry-y1G">
                                 <rect key="frame" x="41" y="182" width="310" height="235"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EPt-Ry-y1G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="08v-ey-qbg"/>
-                            <constraint firstItem="zTV-Cg-duK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2gk-3g-I7d"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EPt-Ry-y1G" secondAttribute="trailing" constant="42" id="Cnl-hh-crn"/>
-                            <constraint firstItem="EPt-Ry-y1G" firstAttribute="top" secondItem="zTV-Cg-duK" secondAttribute="bottom" constant="51" id="ULZ-7w-MRF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EPt-Ry-y1G" secondAttribute="trailing" constant="42" id="Wtz-4m-lgy"/>
-                            <constraint firstItem="zTV-Cg-duK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Zut-NJ-5Ei"/>
-                            <constraint firstItem="zTV-Cg-duK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="aLu-We-vvf"/>
-                            <constraint firstItem="EPt-Ry-y1G" firstAttribute="top" secondItem="zTV-Cg-duK" secondAttribute="bottom" constant="10" id="bOy-oY-Edv"/>
-                            <constraint firstItem="EPt-Ry-y1G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="m9d-Wa-Evw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EPt-Ry-y1G" secondAttribute="bottom" constant="401" id="VAN-al-yKO"/>
+                            <constraint firstItem="zTV-Cg-duK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VXO-3M-FMX"/>
+                            <constraint firstItem="EPt-Ry-y1G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="dOF-iY-G5q"/>
+                            <constraint firstAttribute="trailing" secondItem="zTV-Cg-duK" secondAttribute="trailing" id="h8Z-jF-7mQ"/>
+                            <constraint firstItem="zTV-Cg-duK" firstAttribute="centerX" secondItem="EPt-Ry-y1G" secondAttribute="centerX" id="j8V-6m-72S"/>
+                            <constraint firstItem="zTV-Cg-duK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="shU-uM-yZa"/>
+                            <constraint firstItem="EPt-Ry-y1G" firstAttribute="top" secondItem="zTV-Cg-duK" secondAttribute="bottom" constant="51" id="uSM-mr-ykg"/>
                         </constraints>
                     </view>
                 </viewController>
