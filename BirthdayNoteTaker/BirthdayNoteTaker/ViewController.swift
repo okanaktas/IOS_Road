@@ -22,10 +22,10 @@ class ViewController: UIViewController {
         //Casting - as? String demek, değeri String'e çevirebiliyorsan çevir öyle devam et demek.
         //force casting - as! String demek, ne olursa olsun String olarak kaydedeceksin bunu demek.
         if let newName = storedName as? String{
-            nameLabel.text = newName
+            nameLabel.text = "Name: \(newName)"
         }
         if let newBirthday = storedBirthday as? String{
-            birthdayLabel.text = newBirthday
+            birthdayLabel.text = "Birthday \(newBirthday)"
         }
         
     }
@@ -38,5 +38,12 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(birthdayText.text,forKey: "birthday")
     }
     
+    @IBAction func deleteButton(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "name")
+        UserDefaults.standard.removeObject(forKey: "birthday")
+        
+        nameLabel.text = "Name: "
+        birthdayLabel.text = "Birthday: "
+    }
 }
 
