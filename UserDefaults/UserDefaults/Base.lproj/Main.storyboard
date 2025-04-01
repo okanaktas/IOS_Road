@@ -16,39 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOY-e3-lkE">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOY-e3-lkE">
                                 <rect key="frame" x="16" y="94" width="361" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="rdM-ty-SRf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h1S-z1-lyr">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h1S-z1-lyr">
                                 <rect key="frame" x="16" y="154" width="361" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="6MQ-kz-1uL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmu-FO-IBG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmu-FO-IBG">
                                 <rect key="frame" x="121" y="216" width="61" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="QXR-y6-Jnr"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
                                     <action selector="buttonSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8uv-xo-8sB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYF-lP-q7m">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYF-lP-q7m">
                                 <rect key="frame" x="198" y="215" width="74" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Delete"/>
                                 <connections>
                                     <action selector="buttonDeleted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S33-rC-Nn4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name and Birthday: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwi-1r-jWa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name and Birthday: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwi-1r-jWa">
                                 <rect key="frame" x="16" y="280" width="361" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,6 +60,22 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h1S-z1-lyr" firstAttribute="top" secondItem="GOY-e3-lkE" secondAttribute="bottom" constant="26" id="5ei-5L-PTJ"/>
+                            <constraint firstItem="GOY-e3-lkE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="EWe-cw-Lgg"/>
+                            <constraint firstItem="h1S-z1-lyr" firstAttribute="leading" secondItem="Hwi-1r-jWa" secondAttribute="leading" id="T3O-xa-ZDd"/>
+                            <constraint firstItem="GOY-e3-lkE" firstAttribute="trailing" secondItem="h1S-z1-lyr" secondAttribute="trailing" id="ZAl-qv-8oN"/>
+                            <constraint firstItem="GOY-e3-lkE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ayk-bX-4QI"/>
+                            <constraint firstItem="GOY-e3-lkE" firstAttribute="leading" secondItem="h1S-z1-lyr" secondAttribute="leading" id="azG-r1-9Do"/>
+                            <constraint firstItem="Vmu-FO-IBG" firstAttribute="top" secondItem="h1S-z1-lyr" secondAttribute="bottom" constant="28" id="iXs-xY-HdV"/>
+                            <constraint firstItem="h1S-z1-lyr" firstAttribute="trailing" secondItem="Hwi-1r-jWa" secondAttribute="trailing" id="jEl-oj-ylr"/>
+                            <constraint firstItem="aYF-lP-q7m" firstAttribute="leading" secondItem="Vmu-FO-IBG" secondAttribute="trailing" constant="16" id="l7f-hz-OSh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hwi-1r-jWa" secondAttribute="bottom" constant="417" id="pTC-pG-UO3"/>
+                            <constraint firstItem="Hwi-1r-jWa" firstAttribute="top" secondItem="Vmu-FO-IBG" secondAttribute="bottom" constant="29" id="vQL-Bu-EhI"/>
+                            <constraint firstItem="Vmu-FO-IBG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="wQJ-J5-poK"/>
+                            <constraint firstItem="GOY-e3-lkE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="x8R-cU-pGJ"/>
+                            <constraint firstItem="aYF-lP-q7m" firstAttribute="top" secondItem="h1S-z1-lyr" secondAttribute="bottom" constant="27" id="y2J-9I-NIS"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="labelInputed" destination="Hwi-1r-jWa" id="7L2-zi-YSZ"/>

@@ -18,7 +18,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /* if let ve casting as? kullanmak için diğer örneği yaptım.
         labelInputed.text = UserDefaults.standard.string(forKey: "inputData") ?? "Name and Birthday:"
+        */
+        
+        let storedInput = UserDefaults.standard.object(forKey: "inputData")
+        
+        if let newInput = storedInput as? String{
+            labelInputed.text = "Name and Birthday : \(newInput)"
+        }
         
     }
 
