@@ -9,14 +9,11 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet weak var secondVCLabel: UILabel!
-    
-    @IBOutlet weak var inputedLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
-    
     
 
 }
