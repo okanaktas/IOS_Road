@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XaE-R9-DME">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cq7-R4-tGP">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
@@ -16,107 +16,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1st ViewContoller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVZ-3O-hmq">
-                                <rect key="frame" x="16" y="89" width="361" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmZ-0Z-pdL">
-                                <rect key="frame" x="91" y="181" width="210" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVP-Da-FOv">
+                                <rect key="frame" x="16" y="131" width="361" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Kodsuz diğer sayfaya git"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Bos Git"/>
                                 <connections>
-                                    <segue destination="nRl-2C-CiF" kind="show" id="DKh-J0-IrH"/>
+                                    <segue destination="Gar-j5-DOs" kind="show" id="VAh-P2-9HK"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1VL-Y0-Dw6">
-                                <rect key="frame" x="16" y="350" width="361" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Info:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z0o-nI-Bca">
+                                <rect key="frame" x="16" y="201" width="361" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDk-uv-7Ia">
-                                <rect key="frame" x="140" y="409" width="114" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXi-w5-Kvp">
+                                <rect key="frame" x="117" y="243" width="160" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Bilgiyi Aktar"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Information To Go"/>
                                 <connections>
-                                    <action selector="sendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6qY-IN-326"/>
+                                    <action selector="goToInformationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gRj-y1-SDe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="L1W-B0-yxY"/>
+                    <navigationItem key="navigationItem" id="T7k-dG-LPd"/>
                     <connections>
-                        <outlet property="nameTextField" destination="1VL-Y0-Dw6" id="28o-fy-IT5"/>
-                        <segue destination="nRl-2C-CiF" kind="show" identifier="goToSecondPage" id="Xi0-Az-d2B"/>
+                        <outlet property="infoTextField" destination="Z0o-nI-Bca" id="9Vn-SD-gzo"/>
+                        <segue destination="Gar-j5-DOs" kind="show" identifier="goToSecondPage" id="p5J-0b-qhs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17.557251908396946" y="-704.22535211267609"/>
+            <point key="canvasLocation" x="985.49618320610682" y="3.5211267605633805"/>
         </scene>
         <!--Second View Controller-->
-        <scene sceneID="9rY-jd-WHt">
+        <scene sceneID="HDh-0h-JdS">
             <objects>
-                <viewController id="nRl-2C-CiF" customClass="SecondViewController" customModule="Recap" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qQ1-4X-Rv4">
+                <viewController id="Gar-j5-DOs" customClass="SecondViewController" customModule="Recap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kVs-7F-fYo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2nd ViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB6-xh-qch">
-                                <rect key="frame" x="16" y="98" width="361" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePm-xI-0gQ">
+                                <rect key="frame" x="16" y="85" width="361" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gelen Bilgi:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEA-6n-nhH">
-                                <rect key="frame" x="16" y="235" width="361" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gelen Bilgi:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unt-XH-MnA">
+                                <rect key="frame" x="16" y="146" width="361" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="qls-a1-hud"/>
+                        <viewLayoutGuide key="safeArea" id="okI-GP-PWJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="e4e-ff-MUi"/>
+                    <navigationItem key="navigationItem" id="gU9-36-Gno"/>
                     <connections>
-                        <outlet property="inputedLabel" destination="bEA-6n-nhH" id="iCm-CE-emb"/>
+                        <outlet property="inputedInfoLabel" destination="unt-XH-MnA" id="tSU-0q-vO2"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xQS-vz-oz8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xlZ-gB-btX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.70992366412213" y="-704.22535211267609"/>
+            <point key="canvasLocation" x="1710.6870229007634" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="yBu-hO-ijc">
+        <scene sceneID="zMv-fk-pfy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XaE-R9-DME" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cq7-R4-tGP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DVY-sv-Y84">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AwL-ly-mU3">
                         <rect key="frame" x="0.0" y="118" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="t09-97-Nv0"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yPt-Nc-HOJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mlO-3q-dYn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGd-5N-yYC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-944.27480916030527" y="-704.22535211267609"/>
+            <point key="canvasLocation" x="58.778625954198468" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xi0-Az-d2B"/>
+        <segue reference="p5J-0b-qhs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

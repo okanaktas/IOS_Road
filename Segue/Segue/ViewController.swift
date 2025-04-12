@@ -20,9 +20,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sendInfoButton(_ sender: Any) {
-        
+        /*
+         Aşağıda ki işlemi zaten prepare içerisinde yapıyoruz yani gereksiz fakat
+        sendInfo'yu başka bir yerde kullanmayı planlıyorsan (örneğin ViewController içinde başka bir işlemde),
+        zaman kalsın. Ama şimdiki haliyle kaldırmak daha temiz olur.
+         
         informationToGo = nameTextField.text ?? ""
-        
+        */
         performSegue(withIdentifier: "sendInfo", sender:  nil)
         
     }
