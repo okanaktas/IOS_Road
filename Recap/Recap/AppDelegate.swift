@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Alert
+//  Recap
 //
 //  Created by Okan Aktas on 18.04.2025.
 //
