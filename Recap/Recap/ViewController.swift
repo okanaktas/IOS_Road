@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             makeAlert(titleInput: "Error!", messageInput: "Password not found!")
         }else if passwordAgainText.text == "" {
             makeAlert(titleInput: "Error!", messageInput: "Password Again not found")
-        }else if passwordText.text == passwordAgainText.text {
+        }else if passwordText.text != passwordAgainText.text {
             makeAlert(titleInput: "Error", messageInput: "Password not match")
         }else{
             allValues = "\(nameText.text ?? ""), \(passwordText.text ?? ""), \(passwordAgainText.text ?? "")"
