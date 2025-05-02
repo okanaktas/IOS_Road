@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Recap
 //
-//  Created by Okan Aktas on 25.04.2025.
+//  Created by Okan Aktas on 2.05.2025.
 //
 
 import UIKit
