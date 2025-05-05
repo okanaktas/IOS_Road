@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     //Variables
     var score = 0
     var timer = Timer()
+    var hideTimer = Timer()
     var counter = 0
     
     var kennyArray = [UIImageView]()
@@ -87,13 +88,14 @@ class ViewController: UIViewController {
         
         //timeInterval -> kaç saniyede bir yap, target -> nereden çağrılacak bu fonksiyon, repeats -> tekrar ediyor mu bu timer ? evet
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
+        hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(hideKenny), userInfo: nil, repeats: true)
         
         hideKenny()
         
     }
     
     
-    func hideKenny(){
+    @objc func hideKenny(){
         //kenny1 görselini gizlemek için
         //kenny1.isHidden = true
         
@@ -121,6 +123,12 @@ class ViewController: UIViewController {
         if counter  == 0 {
             //timer'ı durdurmak için
             timer.invalidate()
+            hideTimer.invalidate()
+            
+            //Timer bittiğinde tüm kennyler görünmez olması için
+            for kenny in kennyArray{
+                kenny.isHidden = true
+            }
             
             let alert = UIAlertController(title: "Time's Up", message: "Do you want to play again ?", preferredStyle: UIAlertController.Style.alert)
             let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
