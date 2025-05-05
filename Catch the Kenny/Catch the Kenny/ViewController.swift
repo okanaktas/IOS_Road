@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     var timer = Timer()
     var counter = 0
     
+    var kennyArray = [UIImageView]()
+    
     //Views
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -77,15 +79,30 @@ class ViewController: UIViewController {
         kenny11.addGestureRecognizer(recognizer11)
         kenny12.addGestureRecognizer(recognizer12)
         
+        kennyArray = [kenny1, kenny2, kenny3, kenny4, kenny5, kenny6, kenny7, kenny8, kenny9, kenny10, kenny11, kenny12]
+        
         //Times
         counter = 10
-        timeLabel.text = "\(counter)"
+        timeLabel.text = "Time: \(counter)"
         
         //timeInterval -> kaç saniyede bir yap, target -> nereden çağrılacak bu fonksiyon, repeats -> tekrar ediyor mu bu timer ? evet
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
         
+        hideKenny()
         
     }
+    
+    
+    func hideKenny(){
+        //kenny1 görselini gizlemek için
+        //kenny1.isHidden = true
+        
+        for kenny in kennyArray{
+            kenny.isHidden = true
+        }
+        
+    }
+    
 
     @objc func increaseScore(){
         score += 1
@@ -93,10 +110,10 @@ class ViewController: UIViewController {
     }
     
     @objc func countDown(){
-     counter -= 1
         timeLabel.text = "Time: \(counter)"
         //Aynı işlevi gören
         //timeLabel.text = String(counter)
+         counter -= 1
         if counter  == 0 {
             //timer'ı durdurmak için
             timer.invalidate()
