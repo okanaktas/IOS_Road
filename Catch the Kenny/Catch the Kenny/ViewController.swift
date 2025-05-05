@@ -9,8 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //Variables
     var score = 0
+    var timer = Timer()
+    var counter = 0
     
+    //Views
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
@@ -33,7 +37,7 @@ class ViewController: UIViewController {
         
         scoreLabel.text = "Score: \(score)"
         
-        //Kullanıcıların kenny görselinin üzerine tıklasını etkin hale getiriyor
+        //Kullanıcıların kenny görselinin üzerine tıklamasını etkin hale getiriyor
         kenny1.isUserInteractionEnabled = true
         kenny2.isUserInteractionEnabled = true
         kenny3.isUserInteractionEnabled = true
@@ -73,12 +77,39 @@ class ViewController: UIViewController {
         kenny11.addGestureRecognizer(recognizer11)
         kenny12.addGestureRecognizer(recognizer12)
         
+        //Times
+        counter = 10
+        timeLabel.text = "\(counter)"
+        
+        //timeInterval -> kaç saniyede bir yap, target -> nereden çağrılacak bu fonksiyon, repeats -> tekrar ediyor mu bu timer ? evet
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
+        
         
     }
 
     @objc func increaseScore(){
         score += 1
         scoreLabel.text = "Score: \(score)"
+    }
+    
+    @objc func countDown(){
+     counter -= 1
+        timeLabel.text = "Time: \(counter)"
+        //Aynı işlevi gören
+        //timeLabel.text = String(counter)
+        if counter  == 0 {
+            //timer'ı durdurmak için
+            timer.invalidate()
+            
+            let alert = UIAlertController(title: "Time's Up", message: "Do you want to play again ?", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+            let replayButton = UIAlertAction(title: "Replay", style: UIAlertAction.Style.default) { UIAlertAction in
+                
+            }
+            alert.addAction(okButton)
+            alert.addAction(replayButton)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
 }
