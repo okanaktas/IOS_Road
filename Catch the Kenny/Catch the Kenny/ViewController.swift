@@ -101,6 +101,10 @@ class ViewController: UIViewController {
             kenny.isHidden = true
         }
         
+        //maksimum değeri kennyArray kadar olacak şekilde bir sayı ver bana
+        let random = Int(arc4random_uniform(UInt32(kennyArray.count) - 1))
+        kennyArray[random].isHidden = false
+        
     }
     
 
