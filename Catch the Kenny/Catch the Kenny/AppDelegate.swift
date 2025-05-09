@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Catch the Kenny
+//  Catch The Kenny
 //
-//  Created by Okan Aktas on 22.04.2025.
+//  Created by Okan Aktas on 9.05.2025.
 //
 
 import UIKit
