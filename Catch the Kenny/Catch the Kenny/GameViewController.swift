@@ -77,6 +77,27 @@ class GameViewController: UIViewController {
         kenny10image.addGestureRecognizer(recognizer10)
         kenny11image.addGestureRecognizer(recognizer11)
         
+        //Tüm yukarıdakiler yerine bir dizi ve döngü ile aşağıdaki gibi yapılabilir
+        
+        /*Aşağıdaki kodu da viewDidLoad üstünde tanımlıyoruz
+        var kennyImageViews: [UIImageView] = []
+         */
+        
+        /* Tüm image view'leri diziye ekle
+                kennyImageViews = [
+                    kenny0image, kenny1image, kenny2image, kenny3image,
+                    kenny4image, kenny5image, kenny6image, kenny7image,
+                    kenny8image, kenny9image, kenny10image, kenny11image
+                ]
+                
+                // Hepsine tek tek gesture recognizer ekle
+                for imageView in kennyImageViews {
+                    imageView.isUserInteractionEnabled = true
+                    let recognizer = UITapGestureRecognizer(target: self, action: #selector(increaseScore))
+                    imageView.addGestureRecognizer(recognizer)
+                }
+         */
+        
         //Timers
         counterLabel.text = "Counter: \(counterTime)"
         //Saniye de 1 yap, nereden çağrılacak bu fonk.
