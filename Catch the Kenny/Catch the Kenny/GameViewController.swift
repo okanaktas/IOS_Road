@@ -9,9 +9,12 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    //Variables
+    var timer = Timer()
     var counterTime = 25
     var score = 0
 
+    //Views
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
@@ -73,12 +76,27 @@ class GameViewController: UIViewController {
         kenny9image.addGestureRecognizer(recognizer9)
         kenny10image.addGestureRecognizer(recognizer10)
         kenny11image.addGestureRecognizer(recognizer11)
+        
+        //Timers
+        counterLabel.text = "Counter: \(counterTime)"
+        //Saniye de 1 yap, nereden çağrılacak bu fonk.
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
 
     }
     
     @objc func increaseScore(){
         score += 1
         scoreLabel.text = "Score: \(score)"
+    }
+    
+    @objc func countDown(){
+        counterLabel.text = "Counter: \(counterTime)"
+        counterTime -= 1
+        if counterTime == 0 {
+            timer.invalidate()
+            
+            //Alert
+        }
     }
 
 }
