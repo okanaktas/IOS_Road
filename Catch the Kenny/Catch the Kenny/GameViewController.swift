@@ -135,11 +135,22 @@ class GameViewController: UIViewController {
             timer.invalidate()
             hideTimer.invalidate()
             
+            for i in kennyImageArray{
+                i.isHidden = true
+            }
+            
             //Alert
             let alert = UIAlertController(title: "Time is Up", message: "Do you wanna play again ?", preferredStyle: UIAlertController.Style.alert)
             let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
             let replayButton = UIAlertAction(title: "Replay", style: UIAlertAction.Style.default) { UIAlertAction in
                 //replay function
+                self.score = 0
+                self.scoreLabel.text = "Score: \(self.score)"
+                self.counterTime = 25
+                self.counterLabel.text = "Counter: \(self.counterTime)"
+                
+                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.countDown), userInfo: nil, repeats: true)
+                self.hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.hideKenny), userInfo: nil, repeats: true)
             }
             alert.addAction(okButton)
             alert.addAction(replayButton)
