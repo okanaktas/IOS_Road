@@ -10,6 +10,7 @@ import UIKit
 class GameViewController: UIViewController {
     
     var counterTime = 25
+    var score = 0
 
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -76,7 +77,8 @@ class GameViewController: UIViewController {
     }
     
     @objc func increaseScore(){
-        
+        score += 1
+        scoreLabel.text = "Score: \(score)"
     }
 
 }
