@@ -13,6 +13,7 @@ class GameViewController: UIViewController {
     var timer = Timer()
     var counterTime = 25
     var score = 0
+    var kennyImageArray : [UIImageView] = []
     
     //Views
     @IBOutlet weak var counterLabel: UILabel!
@@ -77,6 +78,10 @@ class GameViewController: UIViewController {
         kenny10image.addGestureRecognizer(recognizer10)
         kenny11image.addGestureRecognizer(recognizer11)
         
+        kennyImageArray = [kenny0image, kenny1image, kenny2image, kenny3image, kenny4image, kenny5image, kenny6image,kenny7image,kenny8image,kenny9image,kenny10image,kenny11image]
+        
+        
+        
         //Tüm yukarıdakiler yerine bir dizi ve döngü ile aşağıdaki gibi yapılabilir
         
         /*Aşağıdaki kodu da viewDidLoad üstünde tanımlıyoruz
@@ -103,6 +108,14 @@ class GameViewController: UIViewController {
         //Saniye de 1 yap, nereden çağrılacak bu fonk.
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
         
+        hideKenny()
+        
+    }
+    
+    func hideKenny(){
+        for i in kennyImageArray{
+            i.isHidden = true
+        }
     }
     
     @objc func increaseScore(){
