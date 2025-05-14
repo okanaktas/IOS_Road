@@ -135,6 +135,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="QA0-Im-tqc"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="PJ9-hq-7d8" id="R56-62-cmJ"/>
+                        <outlet property="kenny0image" destination="5V5-HV-oIr" id="fy1-8e-qJq"/>
+                        <outlet property="kenny10image" destination="6ku-5R-c92" id="7KV-w8-6J3"/>
+                        <outlet property="kenny11image" destination="agg-iA-Fau" id="a63-za-aXv"/>
+                        <outlet property="kenny1image" destination="rxs-8b-XjC" id="zym-WC-ZUn"/>
+                        <outlet property="kenny2image" destination="0CK-aB-k8E" id="dce-9K-xNv"/>
+                        <outlet property="kenny3image" destination="lmo-Tz-vp2" id="XfN-WP-hLU"/>
+                        <outlet property="kenny4image" destination="KWt-iQ-hx3" id="mkW-ga-pUV"/>
+                        <outlet property="kenny5image" destination="8Cl-xX-UjA" id="3yf-wD-666"/>
+                        <outlet property="kenny6image" destination="YMc-00-tGZ" id="HEy-Jc-cWH"/>
+                        <outlet property="kenny7image" destination="7qh-Gh-3Q5" id="yyU-y9-xSX"/>
+                        <outlet property="kenny8image" destination="0EQ-X2-EgE" id="rpf-pQ-ZKQ"/>
+                        <outlet property="kenny9image" destination="prh-Kf-clI" id="KpI-xP-8VX"/>
+                        <outlet property="scoreLabel" destination="LcE-KZ-OIu" id="8XD-4m-03J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kd-jX-tS0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
