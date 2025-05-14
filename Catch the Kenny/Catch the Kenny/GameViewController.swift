@@ -96,6 +96,15 @@ class GameViewController: UIViewController {
             timer.invalidate()
             
             //Alert
+            let alert = UIAlertController(title: "Time is Up", message: "Do you wanna play again ?", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+            let replayButton = UIAlertAction(title: "Replay", style: UIAlertAction.Style.default) { UIAlertAction in
+                //replay function
+            }
+            alert.addAction(okButton)
+            alert.addAction(replayButton)
+            //completion -> bu bitince de bir şey yapayım mı ? Nil diyorum çünkü zaten replay butonu içerisinde yapıyorum
+            self.present(alert, animated: true, completion: nil)
         }
     }
 
