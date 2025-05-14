@@ -14,6 +14,7 @@ class GameViewController: UIViewController {
     var counterTime = 25
     var score = 0
     var kennyImageArray : [UIImageView] = []
+    var hideTimer = Timer()
     
     //Views
     @IBOutlet weak var counterLabel: UILabel!
@@ -107,15 +108,17 @@ class GameViewController: UIViewController {
         counterLabel.text = "Counter: \(counterTime)"
         //Saniye de 1 yap, nereden çağrılacak bu fonk.
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
-        
+        hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(hideKenny), userInfo: nil, repeats: true)
         hideKenny()
         
     }
     
-    func hideKenny(){
+    @objc func hideKenny(){
         for i in kennyImageArray{
             i.isHidden = true
         }
+        let randomNumber = Int(arc4random_uniform(UInt32(kennyImageArray.count - 1)))
+        kennyImageArray[randomNumber].isHidden = false
     }
     
     @objc func increaseScore(){
@@ -130,6 +133,7 @@ class GameViewController: UIViewController {
         
         if counterTime == 0 {
             timer.invalidate()
+            hideTimer.invalidate()
             
             //Alert
             let alert = UIAlertController(title: "Time is Up", message: "Do you wanna play again ?", preferredStyle: UIAlertController.Style.alert)
