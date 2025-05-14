@@ -13,7 +13,7 @@ class GameViewController: UIViewController {
     var timer = Timer()
     var counterTime = 25
     var score = 0
-
+    
     //Views
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -80,29 +80,29 @@ class GameViewController: UIViewController {
         //Tüm yukarıdakiler yerine bir dizi ve döngü ile aşağıdaki gibi yapılabilir
         
         /*Aşağıdaki kodu da viewDidLoad üstünde tanımlıyoruz
-        var kennyImageViews: [UIImageView] = []
+         var kennyImageViews: [UIImageView] = []
          */
         
         /* Tüm image view'leri diziye ekle
-                kennyImageViews = [
-                    kenny0image, kenny1image, kenny2image, kenny3image,
-                    kenny4image, kenny5image, kenny6image, kenny7image,
-                    kenny8image, kenny9image, kenny10image, kenny11image
-                ]
-                
-                // Hepsine tek tek gesture recognizer ekle
-                for imageView in kennyImageViews {
-                    imageView.isUserInteractionEnabled = true
-                    let recognizer = UITapGestureRecognizer(target: self, action: #selector(increaseScore))
-                    imageView.addGestureRecognizer(recognizer)
-                }
+         kennyImageViews = [
+         kenny0image, kenny1image, kenny2image, kenny3image,
+         kenny4image, kenny5image, kenny6image, kenny7image,
+         kenny8image, kenny9image, kenny10image, kenny11image
+         ]
+         
+         // Hepsine tek tek gesture recognizer ekle
+         for imageView in kennyImageViews {
+         imageView.isUserInteractionEnabled = true
+         let recognizer = UITapGestureRecognizer(target: self, action: #selector(increaseScore))
+         imageView.addGestureRecognizer(recognizer)
+         }
          */
         
         //Timers
         counterLabel.text = "Counter: \(counterTime)"
         //Saniye de 1 yap, nereden çağrılacak bu fonk.
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
-
+        
     }
     
     @objc func increaseScore(){
@@ -111,8 +111,10 @@ class GameViewController: UIViewController {
     }
     
     @objc func countDown(){
-        counterLabel.text = "Counter: \(counterTime)"
         counterTime -= 1
+        
+        counterLabel.text = "Counter: \(counterTime)"
+        
         if counterTime == 0 {
             timer.invalidate()
             
@@ -128,5 +130,5 @@ class GameViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-
+    
 }
