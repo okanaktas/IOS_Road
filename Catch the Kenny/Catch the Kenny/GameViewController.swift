@@ -16,6 +16,8 @@ class GameViewController: UIViewController {
     var kennyImageArray : [UIImageView] = []
     var hideTimer = Timer()
     
+    var highScore = 0
+    
     //Views
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -138,6 +140,13 @@ class GameViewController: UIViewController {
             for i in kennyImageArray{
                 i.isHidden = true
             }
+            
+            //High Score
+            let storedHighScore = UserDefaults.standard.integer(forKey: "highScore")
+            if score > storedHighScore {
+                UserDefaults.standard.set(score, forKey: "highScore")
+            }
+
             
             //Alert
             let alert = UIAlertController(title: "Time is Up", message: "Do you wanna play again ?", preferredStyle: UIAlertController.Style.alert)

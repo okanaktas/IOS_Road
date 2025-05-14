@@ -23,7 +23,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPl-Lk-wsJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPl-Lk-wsJ">
                                 <rect key="frame" x="65" y="306" width="199" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" id="Z1a-sX-g5R"/>
                     <connections>
                         <outlet property="enterCounterText" destination="NO7-AJ-8ua" id="BJ1-2Z-PH4"/>
-                        <outlet property="lastScoreLabel" destination="JPl-Lk-wsJ" id="n1C-Cz-ljh"/>
+                        <outlet property="highScoreLabel" destination="JPl-Lk-wsJ" id="Bmc-YN-aDj"/>
                         <segue destination="Hah-cv-wr7" kind="show" identifier="startGame" id="1QE-Xi-KYR"/>
                     </connections>
                 </viewController>

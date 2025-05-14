@@ -9,13 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var lastScoreLabel: UILabel!
+    var highScore = 0
+    
+    
+    @IBOutlet weak var highScoreLabel: UILabel!
     
     @IBOutlet weak var enterCounterText: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        highScore = UserDefaults.standard.integer(forKey: "highScore")
+        highScoreLabel.text = "High Score: \(highScore)"
+        
         
     }
     
