@@ -23,5 +23,12 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "startGame", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startGame"{
+            let destinationVC = segue.destination as! GameViewController
+            destinationVC.counterTime = Int(enterCounterText.text ?? "30") ?? 30
+        }
+    }
+    
 }
 

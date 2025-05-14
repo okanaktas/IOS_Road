@@ -9,7 +9,7 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    var counterTime: Int = 30
+    var counterTime = 25
 
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
