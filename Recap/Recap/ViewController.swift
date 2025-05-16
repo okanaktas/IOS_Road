@@ -9,11 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var counterText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func playGameButton(_ sender: Any) {
+        performSegue(withIdentifier: "playGame", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "playGame" {
+            let destinationVC = segue.destination as! GameViewController
+            destinationVC.counter = Int(counterText.text ?? "30") ?? 30
+        }
+    }
+    
 }
 
