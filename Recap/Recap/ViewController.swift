@@ -21,9 +21,9 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "playGane" {
+        if segue.identifier == "playGame" {
             let destinationVC = segue.destination as! GameViewController
-            
+            destinationVC.counter = Int(counterLabel.text ?? "30") ?? 30
         }
     }
     

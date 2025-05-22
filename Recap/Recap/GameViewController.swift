@@ -52,8 +52,26 @@ class GameViewController: UIViewController {
     }
     
     @objc func downCounter(){
-        counter = counter - 1
         counterLabel.text = "Counter: \(counter)"
+        counter = counter - 1
+        
+        if counter == 0{
+            timerForCounter.invalidate()
+            timerForShowImage.invalidate()
+            
+            let alert = UIAlertController(title: "Time's Up", message: "Do you wanna play again ?", preferredStyle: UIAlertController.Style.alert)
+            let noBUtton = UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil)
+            let replayButton = UIAlertAction(title: "Replay ?", style: UIAlertAction.Style.default) { UIAlertAction in
+                self.score = 0
+                self.counter = 30
+                self.timerForCounter = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.downCounter), userInfo: nil, repeats: true)
+                self.timerForShowImage = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.showImage), userInfo: nil, repeats: true)
+                
+            }
+            alert.addAction(noBUtton)
+            alert.addAction(replayButton)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @objc func showImage(){
