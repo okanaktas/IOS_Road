@@ -7,5 +7,5 @@
 
 import Foundation
 
-print("Hello, World!")
-
+let okan = Musicians(name: "Okan", age: 28, instrument: "Guitar", musicianType: .Drummer)
+print(okan.musicianType)

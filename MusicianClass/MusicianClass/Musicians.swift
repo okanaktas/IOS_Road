@@ -7,10 +7,26 @@
 
 import Foundation
 
+enum MusiciansType{
+    case LeadGuitar
+    case Vocalist
+    case Drummer
+    case Bassist
+    case Violenist
+}
+
 class Musicians{
     
-    var name = ""
-    var age = 0
-    var instrument = ""
+    //Property
+    var name : String
+    var age : Int
+    var instrument : String
+    var musicianType : MusiciansType
     
+    init(name: String, age: Int, instrument: String, musicianType: MusiciansType) {
+        self.name = name
+        self.age = age
+        self.instrument = instrument
+        self.musicianType = musicianType
+    }
 }
