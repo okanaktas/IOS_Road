@@ -14,6 +14,8 @@ class SuperMusician : Musicians{
         print("enter night!")
     }
     
+    //private sadece bulunduğu sınıf içerisinden erişilebilir.
+    //private
     override func sing() {
         super.sing()
         print("super sing!")
