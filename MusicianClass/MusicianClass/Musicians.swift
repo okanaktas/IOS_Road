@@ -29,4 +29,7 @@ class Musicians{
         self.instrument = instrument
         self.musicianType = musicianType
     }
+    
+    func sing(){
+        print("Nothing else matter!")}
 }
