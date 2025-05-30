@@ -2,33 +2,65 @@
 //  ViewController.swift
 //  Recap
 //
-//  Created by Okan Aktas on 29.05.2025.
+//  Created by Okan Aktas on 30.05.2025.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    var personArray : [Person] = []
+    
+    var choosenPerson : Person?
+    
 
-    @IBOutlet weak var textCounter: UITextField!
+    @IBOutlet weak var tableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        let okan = Person(name: "Okan", job: "Engineer", image: UIImage(systemName: "car")!)
+        let berkay = Person(name: "Berkay", job: "Student", image: UIImage(systemName: "car.fill")!)
+        let filiz = Person(name: "Filiz", job: "Lawyer", image: UIImage(systemName: "car")!)
+        
+        personArray = [okan,berkay,filiz]
+        
         
     }
-
-
-    @IBAction func buttonPlay(_ sender: Any) {
-        performSegue(withIdentifier: "playGame", sender: nil)
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return personArray.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        var content  = cell.defaultContentConfiguration()
+        content.text = personArray[indexPath.row].name
+        content.secondaryText = personArray[indexPath.row].job
+        cell.contentConfiguration = content
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        choosenPerson = personArray[indexPath.row]
+        performSegue(withIdentifier: "toDetailsVC", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "playGame" {
-            let destinationVC = segue.destination as! GameViewController
-            destinationVC.counter = Int(textCounter.text ?? "10") ?? 10
+        if segue.identifier == "toDetailsVC"{
+            let destinationVC = segue.destination as! DetailsViewController
+            destinationVC.selectedPerson = choosenPerson
         }
     }
     
     
     
+    
+
+
 }
 

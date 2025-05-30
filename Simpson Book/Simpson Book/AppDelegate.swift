@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Recap
+//  Simpson Book
 //
 //  Created by Okan Aktas on 30.05.2025.
 //
