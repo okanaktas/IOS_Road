@@ -42,7 +42,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //burada tableView içerisinde kullanmak için hücre oluşturuyoruz
         let cell = UITableViewCell()
-        cell.textLabel?.text = simpsonArray[indexPath.row].name
+        //Bu eski olan    cell.textLabel?.text = simpsonArray[indexPath.row].name
+        var content = cell.defaultContentConfiguration()
+        content.text = simpsonArray[indexPath.row].name
+        content.secondaryText = simpsonArray[indexPath.row].job
+        cell.contentConfiguration = content
         return cell
     }
     
